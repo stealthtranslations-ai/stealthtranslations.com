@@ -102,11 +102,34 @@ export default function About() {
             </p>
           </motion.div>
 
+          {/* Video Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 mb-12"
+          >
+            <h2 className="text-3xl font-bold mb-6">Recognised Quality Standards</h2>
+            <div className="aspect-video bg-slate-700/50 rounded-xl overflow-hidden">
+              <video 
+                className="w-full h-full object-cover"
+                controls
+                poster="/images/video-poster.jpg"
+              >
+                <source src="https://stealthtranslations.com/wp-content/uploads/2019/01/stealth_intro.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p className="text-gray-300 mt-4 text-center">
+              Learn more about our ISO 9001 and ISO 17100 certifications and quality protocols
+            </p>
+          </motion.div>
+
           {/* Company Story */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 mb-12"
           >
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
