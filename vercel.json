@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".next",
+  "outputDirectory": "out",
   "installCommand": "npm install",
   "framework": "nextjs",
   "regions": ["iad1"],
@@ -24,25 +24,6 @@
           "value": "1; mode=block"
         }
       ]
-    },
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "s-maxage=86400"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/services/:path*",
-      "destination": "/#services"
-    },
-    {
-      "source": "/ai-services/:path*",
-      "destination": "/#ai-services"
     }
   ]
 }
