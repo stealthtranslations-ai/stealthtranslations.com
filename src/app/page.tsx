@@ -27,10 +27,10 @@ export default function Home() {
               <span className="text-xl font-bold">Stealth Translations</span>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#services" className="hover:text-blue-400 transition">Services</a>
+              <a href="/services" className="hover:text-blue-400 transition">Services</a>
               <a href="#ai-services" className="hover:text-blue-400 transition">AI Services</a>
-              <a href="#about" className="hover:text-blue-400 transition">About</a>
-              <a href="#contact" className="hover:text-blue-400 transition">Contact</a>
+              <a href="/about" className="hover:text-blue-400 transition">About</a>
+              <a href="/contact" className="hover:text-blue-400 transition">Contact</a>
             </div>
             <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition">
               Get Quote
@@ -62,9 +62,10 @@ export default function Home() {
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
-              <button className="border border-white/30 hover:bg-white/10 px-8 py-4 rounded-full text-lg font-semibold transition">
-                Explore AI Services
-              </button>
+              <a href="/services" className="border border-white/30 hover:bg-white/10 px-8 py-4 rounded-full text-lg font-semibold transition flex items-center justify-center">
+                Explore All Services
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </div>
           </motion.div>
         </div>
