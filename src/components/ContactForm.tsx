@@ -27,24 +27,41 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        message: ''
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 3000);
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            company: '',
+            service: '',
+            message: ''
+          });
+        }, 3000);
+      } else {
+        throw new Error(data.error || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Failed to send message. Please try again or contact us directly at info@stealthtranslations.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -197,12 +214,21 @@ export default function ContactForm() {
             className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="">Select a service...</option>
-            <option value="translation">Translation Services</option>
-            <option value="interpretation">Interpretation Services</option>
-            <option value="localization">Localization</option>
-            <option value="ai-post-editing">AI Post-Editing</option>
-            <option value="mtpe">Machine Translation Post-Editing</option>
-            <option value="data-collection">AI Data Collection</option>
+            <optgroup label="AI Services (80% Focus)">
+              <option value="ai-post-editing">AI Post-Editing</option>
+              <option value="mtpe-services">MTPE Services</option>
+              <option value="multilingual-llm-training">Multilingual LLM Training</option>
+              <option value="ai-data-collection">AI Data Collection</option>
+              <option value="data-annotation">Data Annotation</option>
+            </optgroup>
+            <optgroup label="Traditional Services">
+              <option value="translation">Translation</option>
+              <option value="interpretation">Interpretation</option>
+              <option value="certification">Certification</option>
+              <option value="localization">Localization</option>
+              <option value="voice-over">Voice Over</option>
+              <option value="transcription">Transcription</option>
+            </optgroup>
             <option value="other">Other</option>
           </select>
         </div>

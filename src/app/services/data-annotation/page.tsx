@@ -367,23 +367,20 @@ export default function DataAnnotation() {
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="bg-slate-700/50 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Basic</h3>
-                  <p className="text-2xl font-bold text-pink-400 mb-2">Custom</p>
                   <p className="text-gray-400 text-sm">Standard annotation projects</p>
                 </div>
                 <div className="bg-pink-600/20 border border-pink-400/30 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Professional</h3>
-                  <p className="text-2xl font-bold text-pink-300 mb-2">Custom</p>
                   <p className="text-gray-300 text-sm">Complex annotation + expert review</p>
                 </div>
                 <div className="bg-slate-700/50 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Enterprise</h3>
-                  <p className="text-2xl font-bold text-pink-400 mb-2">Custom</p>
                   <p className="text-gray-400 text-sm">Large-scale + dedicated team</p>
                 </div>
               </div>
-              <button className="bg-pink-600 hover:bg-pink-700 px-8 py-4 rounded-full font-semibold transition">
+              <a href="/contact" className="bg-pink-600 hover:bg-pink-700 px-8 py-4 rounded-full font-semibold transition">
                 Get Custom Quote
-              </button>
+              </a>
             </div>
           </motion.div>
 
@@ -401,10 +398,10 @@ export default function DataAnnotation() {
               Partner with our expert annotation team to create high-quality training data for your AI models.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-pink-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+              <a href="/contact" className="bg-white text-pink-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
                 Start Annotation Project
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              </a>
               <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
                 Download Annotation Guide
               </button>

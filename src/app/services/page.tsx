@@ -10,42 +10,48 @@ export default function Services() {
       title: 'Translation',
       description: 'Quality technical translations in any electronic format, certified to ISO 17100 standards.',
       features: ['Technical Documentation', 'Legal Documents', 'Medical Content', 'Financial Reports'],
-      color: 'bg-blue-600'
+      color: 'bg-blue-600',
+      link: '/services/translation'
     },
     {
       icon: Users,
       title: 'Interpretation',
       description: 'Our personable and enthusiastic interpreters are ready to assist bridge the language barrier on your behalf.',
       features: ['Simultaneous Interpretation', 'Consecutive Interpretation', 'Remote Interpretation', 'On-site Services'],
-      color: 'bg-purple-600'
+      color: 'bg-purple-600',
+      link: '/services/interpretation'
     },
     {
       icon: FileText,
       title: 'Certification',
       description: 'Following a legal process to allow proper legal use of documents in other domiciles.',
       features: ['Legal Certification', 'Notarization', 'Apostille Services', 'Consular Legalization'],
-      color: 'bg-green-600'
+      color: 'bg-green-600',
+      link: '/services/certification'
     },
     {
       icon: Globe,
       title: 'Localization',
       description: 'Excellence in cultural and regional linguistic fine-tuning to ensure the effectiveness of your translation project.',
       features: ['Website Localization', 'Software Localization', 'Cultural Adaptation', 'Regional Compliance'],
-      color: 'bg-orange-600'
+      color: 'bg-orange-600',
+      link: '/services/localization'
     },
     {
       icon: FileText,
       title: 'Voice Over',
       description: 'Compel your target audience effectively after selecting from our diverse team, the perfect voice over artist.',
       features: ['Commercial Voice Over', 'E-learning Narration', 'Documentary Voice Over', 'Multi-language Dubbing'],
-      color: 'bg-pink-600'
+      color: 'bg-pink-600',
+      link: '/services/voice-over'
     },
     {
       icon: FileText,
       title: 'Transcription',
       description: 'Accurately convert media or scanned documents of your project into its electronic text format.',
       features: ['Audio Transcription', 'Video Transcription', 'Medical Transcription', 'Legal Transcription'],
-      color: 'bg-cyan-600'
+      color: 'bg-cyan-600',
+      link: '/services/transcription'
     }
   ];
 
@@ -56,7 +62,6 @@ export default function Services() {
       description: 'Enhance machine-translated content with expert human oversight. Our AI-assisted post-editing ensures nuance, context, and cultural accuracy.',
       features: ['99%+ accuracy guarantee', '50% faster than traditional', 'Context-aware refinement', 'Quality metrics'],
       color: 'bg-blue-600',
-      price: '$0.03 - $0.08 per word',
       link: '/services/ai-post-editing'
     },
     {
@@ -65,7 +70,6 @@ export default function Services() {
       description: 'Machine Translation Post-Editing combines cutting-edge MT engines with expert human linguists to deliver high-quality translations.',
       features: ['Neural MT integration', 'Custom engine training', 'Real-time quality metrics', 'Scalable solutions'],
       color: 'bg-purple-600',
-      price: '$0.02 - $0.06 per word',
       link: '/services/mtpe-services'
     },
     {
@@ -74,7 +78,6 @@ export default function Services() {
       description: 'Specialized training data and methodologies for developing multilingual large language models.',
       features: ['Custom dataset creation', 'Fine-tuning expertise', 'Cultural context integration', 'Model optimization'],
       color: 'bg-green-600',
-      price: 'Custom pricing',
       link: '/services/multilingual-llm-training'
     },
     {
@@ -83,7 +86,6 @@ export default function Services() {
       description: 'Comprehensive multilingual data collection services for AI training. From parallel corpora to annotated datasets.',
       features: ['140+ language coverage', 'Quality-verified datasets', 'Custom data solutions', 'Ethical sourcing'],
       color: 'bg-orange-600',
-      price: 'Custom pricing',
       link: '/services/ai-data-collection'
     },
     {
@@ -92,7 +94,6 @@ export default function Services() {
       description: 'Expert linguistic annotation services for machine learning. Our team provides precise labeling, tagging, and classification.',
       features: ['NLP annotation experts', 'Quality assurance protocols', 'Scalable operations', 'Multiple annotation types'],
       color: 'bg-pink-600',
-      price: 'Custom pricing',
       link: '/services/data-annotation'
     }
   ];
@@ -167,10 +168,7 @@ export default function Services() {
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   className="bg-gradient-to-br from-slate-800/60 to-blue-900/30 border border-blue-400/20 rounded-2xl p-8 hover:bg-gradient-to-br hover:from-slate-800/70 hover:to-blue-900/40 transition group relative overflow-hidden"
                 >
-                  <div className="absolute top-4 right-4 bg-blue-600/30 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold border border-blue-400/30">
-                    {service.price}
-                  </div>
-                  <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition shadow-lg shadow-blue-500/20`}>
+                                    <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition shadow-lg shadow-blue-500/20`}>
                     <service.icon className="w-8 h-8" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-blue-100">{service.title}</h3>
@@ -227,10 +225,10 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                  <button className="text-gray-400 hover:text-gray-300 font-medium text-sm flex items-center group">
+                  <a href={service.link} className="text-gray-400 hover:text-gray-300 font-medium text-sm flex items-center group">
                     Learn More
                     <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition" />
-                  </button>
+                  </a>
                 </motion.div>
               ))}
             </div>

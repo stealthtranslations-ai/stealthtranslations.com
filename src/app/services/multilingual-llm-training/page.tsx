@@ -284,23 +284,20 @@ export default function MultilingualLLMTraining() {
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="bg-slate-700/50 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Starter</h3>
-                  <p className="text-2xl font-bold text-green-400 mb-2">Custom</p>
                   <p className="text-gray-400 text-sm">Basic multilingual model training</p>
                 </div>
                 <div className="bg-green-600/20 border border-green-400/30 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Professional</h3>
-                  <p className="text-2xl font-bold text-green-300 mb-2">Custom</p>
                   <p className="text-gray-300 text-sm">Advanced fine-tuning + optimization</p>
                 </div>
                 <div className="bg-slate-700/50 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Enterprise</h3>
-                  <p className="text-2xl font-bold text-green-400 mb-2">Custom</p>
                   <p className="text-gray-400 text-sm">Full-scale development + support</p>
                 </div>
               </div>
-              <button className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full font-semibold transition">
+              <a href="/contact" className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full font-semibold transition">
                 Get Custom Quote
-              </button>
+              </a>
             </div>
           </motion.div>
 
@@ -352,9 +349,9 @@ export default function MultilingualLLMTraining() {
                 <p className="text-gray-300 mb-6">
                   Transform your AI capabilities with truly multilingual models that understand and communicate across cultures.
                 </p>
-                <button className="w-full bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full font-semibold transition">
+                <a href="/contact" className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full font-semibold transition">
                   Schedule Expert Consultation
-                </button>
+                </a>
               </motion.div>
             </div>
           </motion.div>
@@ -373,10 +370,10 @@ export default function MultilingualLLMTraining() {
               Partner with us to create sophisticated multilingual models that truly understand the world's languages and cultures.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+              <a href="/contact" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              </a>
               <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
                 Download Whitepaper
               </button>

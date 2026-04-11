@@ -116,10 +116,10 @@ export default function MTPEServices() {
               to deliver high-quality translations at unprecedented speed and scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
-                Get Started - $0.02/word
+              <a href="/contact" className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+                Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              </a>
               <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
                 View Demo
               </button>
@@ -228,29 +228,26 @@ export default function MTPEServices() {
           >
             <div className="bg-gradient-to-br from-slate-800/60 to-purple-900/30 border border-purple-400/20 rounded-2xl p-12 text-center">
               <h2 className="text-3xl font-bold mb-4">Competitive Pricing</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Starting from just <span className="text-purple-400 font-bold">$0.02 per word</span>
+              <p className="text-xl text-purple-300 mb-8">
+                Contact us for competitive pricing tailored to your volume needs
               </p>
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="bg-slate-700/50 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Light</h3>
-                  <p className="text-2xl font-bold text-purple-400 mb-2">$0.02/word</p>
                   <p className="text-gray-400 text-sm">Basic MTPE for general content</p>
                 </div>
                 <div className="bg-purple-600/20 border border-purple-400/30 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Professional</h3>
-                  <p className="text-2xl font-bold text-purple-300 mb-2">$0.04/word</p>
                   <p className="text-gray-300 text-sm">Enhanced quality + terminology management</p>
                 </div>
                 <div className="bg-slate-700/50 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Enterprise</h3>
-                  <p className="text-2xl font-bold text-purple-400 mb-2">$0.06/word</p>
                   <p className="text-gray-400 text-sm">Custom engines + dedicated team</p>
                 </div>
               </div>
-              <button className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-full font-semibold transition">
+              <a href="/contact" className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-full font-semibold transition">
                 Get Custom Quote
-              </button>
+              </a>
             </div>
           </motion.div>
 
@@ -328,10 +325,10 @@ export default function MTPEServices() {
               Join leading companies using MTPE for high-volume, high-quality translations at scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+              <a href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              </a>
               <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
                 Schedule Demo
               </button>

@@ -340,23 +340,20 @@ export default function AIDataCollection() {
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="bg-slate-700/50 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Standard</h3>
-                  <p className="text-2xl font-bold text-orange-400 mb-2">Custom</p>
                   <p className="text-gray-400 text-sm">General purpose datasets</p>
                 </div>
                 <div className="bg-orange-600/20 border border-orange-400/30 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Professional</h3>
-                  <p className="text-2xl font-bold text-orange-300 mb-2">Custom</p>
                   <p className="text-gray-300 text-sm">Domain-specific + enhanced QA</p>
                 </div>
                 <div className="bg-slate-700/50 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Enterprise</h3>
-                  <p className="text-2xl font-bold text-orange-400 mb-2">Custom</p>
                   <p className="text-gray-400 text-sm">Custom collection + ongoing support</p>
                 </div>
               </div>
-              <button className="bg-orange-600 hover:bg-orange-700 px-8 py-4 rounded-full font-semibold transition">
+              <a href="/contact" className="bg-orange-600 hover:bg-orange-700 px-8 py-4 rounded-full font-semibold transition">
                 Get Custom Quote
-              </button>
+              </a>
             </div>
           </motion.div>
 
@@ -374,10 +371,10 @@ export default function AIDataCollection() {
               Partner with us to source high-quality, ethically collected multilingual data for your AI projects.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+              <a href="/contact" className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
                 Start Data Collection
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              </a>
               <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
                 Download Data Catalog
               </button>

@@ -116,10 +116,10 @@ export default function AIPostEditing() {
               nuance, context, and cultural accuracy with 99%+ accuracy guarantee.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
-                Get Started - $0.03/word
+              <a href="/contact" className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+                Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              </a>
               <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
                 View Sample
               </button>
@@ -231,28 +231,25 @@ export default function AIPostEditing() {
             <div className="bg-gradient-to-br from-slate-800/60 to-blue-900/30 border border-blue-400/20 rounded-2xl p-12 text-center">
               <h2 className="text-3xl font-bold mb-4">Transparent Pricing</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Starting from just <span className="text-blue-400 font-bold">$0.03 per word</span>
+                Contact us for competitive pricing tailored to your needs
               </p>
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="bg-slate-700/50 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Basic</h3>
-                  <p className="text-2xl font-bold text-blue-400 mb-2">$0.03/word</p>
                   <p className="text-gray-400 text-sm">Standard AI post-editing</p>
                 </div>
                 <div className="bg-blue-600/20 border border-blue-400/30 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Professional</h3>
-                  <p className="text-2xl font-bold text-blue-300 mb-2">$0.05/word</p>
                   <p className="text-gray-300 text-sm">Enhanced review + cultural adaptation</p>
                 </div>
                 <div className="bg-slate-700/50 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-2">Enterprise</h3>
-                  <p className="text-2xl font-bold text-blue-400 mb-2">$0.08/word</p>
                   <p className="text-gray-400 text-sm">Premium + dedicated support</p>
                 </div>
               </div>
-              <button className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full font-semibold transition">
+              <a href="/contact" className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full font-semibold transition">
                 Get Custom Quote
-              </button>
+              </a>
             </div>
           </motion.div>
 
@@ -270,10 +267,10 @@ export default function AIPostEditing() {
               Join hundreds of companies leveraging AI post-editing for faster, more accurate translations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+              <a href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              </a>
               <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
                 Schedule Consultation
               </button>
