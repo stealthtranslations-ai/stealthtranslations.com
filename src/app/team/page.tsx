@@ -12,7 +12,6 @@ export default function Team() {
       image: '/images/team/stephen-weir.jpg',
       bio: 'Leading Stealth Translations with strategic vision and operational excellence, driving growth and innovation in translation services.',
       location: 'Belfast Headquarters',
-      linkedin: '#',
       email: 'stephen.weir@stealthtranslations.com'
     },
     {
@@ -21,7 +20,6 @@ export default function Team() {
       image: '/images/team/marek-posnik.jpg',
       bio: 'Leading our technology infrastructure and software development, ensuring robust systems for our AI-powered translation services.',
       location: 'Poland Office',
-      linkedin: '#',
       email: 'marek.posnik@stealthtranslations.com'
     },
     {
@@ -30,7 +28,6 @@ export default function Team() {
       image: '/images/team/robert-elliott.jpg',
       bio: 'Driving business development and client relationships, expanding our global reach in translation and AI services.',
       location: 'Belfast Headquarters',
-      linkedin: '#',
       email: 'robert.elliott@stealthtranslations.com'
     },
     {
@@ -39,7 +36,6 @@ export default function Team() {
       image: '/images/team/adi-shtyla.jpg',
       bio: 'Managing day-to-day operations and project delivery, ensuring efficiency and quality across all translation services.',
       location: 'Belfast Headquarters',
-      linkedin: '#',
       email: 'adi.shtyla@stealthtranslations.com'
     },
     {
@@ -48,7 +44,6 @@ export default function Team() {
       image: '/images/team/florence-shupikai.jpg',
       bio: 'Overseeing financial operations and strategic planning, maintaining fiscal health and compliance for global operations.',
       location: 'Belfast Headquarters',
-      linkedin: '#',
       email: 'florence.bondayi@stealthtranslations.com'
     }
   ];
@@ -169,18 +164,9 @@ export default function Team() {
                   </div>
                   <div className="flex space-x-3">
                     <a
-                      href={member.linkedin}
-                      className="text-gray-400 hover:text-white transition"
-                      aria-label={`${member.name} LinkedIn`}
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                      </svg>
-                    </a>
-                    <a
                       href={`mailto:${member.email}`}
                       className="text-gray-400 hover:text-white transition"
-                      aria-label={`${member.name} Email`}
+                      aria-label={`Email ${member.name}`}
                     >
                       <Mail className="w-5 h-5" />
                     </a>
