@@ -71,11 +71,11 @@ export default function About() {
               <span className="text-xl font-bold">Stealth Translations</span>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="/" className="hover:text-blue-400 transition">Home</a>
-              <a href="/#services" className="hover:text-blue-400 transition">Services</a>
-              <a href="/#ai-services" className="hover:text-blue-400 transition">AI Services</a>
-              <a href="/about" className="text-blue-400">About</a>
-              <a href="/contact" className="hover:text-blue-400 transition">Contact</a>
+              <a href="/" className="hover:text-emerald-400 transition">Home</a>
+              <a href="/services" className="hover:text-emerald-400 transition">Services</a>
+              <a href="/team" className="hover:text-emerald-400 transition">Team</a>
+              <a href="/about" className="text-emerald-400">About</a>
+              <a href="/contact" className="hover:text-emerald-400 transition">Contact</a>
             </div>
             <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition">
               Get Quote
@@ -102,29 +102,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          {/* Video Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-6">Recognised Quality Standards</h2>
-            <div className="aspect-video bg-slate-700/50 rounded-xl overflow-hidden">
-              <video 
-                className="w-full h-full object-cover"
-                controls
-                poster="/images/video-poster.jpg"
-              >
-                <source src="https://stealthtranslations.com/wp-content/uploads/2019/01/stealth_intro.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <p className="text-gray-300 mt-4 text-center">
-              Learn more about our ISO 9001 and ISO 17100 certifications and quality protocols
-            </p>
-          </motion.div>
-
+          
           {/* Company Story */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -326,10 +304,10 @@ export default function About() {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="/#ai-services" className="hover:text-white transition">AI Post-Editing</a></li>
-              <li><a href="/#ai-services" className="hover:text-white transition">MTPE</a></li>
-              <li><a href="/#ai-services" className="hover:text-white transition">LLM Training</a></li>
-              <li><a href="/#ai-services" className="hover:text-white transition">Data Collection</a></li>
+              <li><a href="/services/ai-data-engineering" className="hover:text-white transition">AI Data Engineering</a></li>
+              <li><a href="/services/ai-software-development" className="hover:text-white transition">AI Software Development</a></li>
+              <li><a href="/services/multilingual-llm-training" className="hover:text-white transition">Multilingual AI Training</a></li>
+              <li><a href="/services/ai-data-collection" className="hover:text-white transition">AI Data Collection</a></li>
             </ul>
           </div>
           <div>
@@ -346,8 +324,8 @@ export default function About() {
             <ul className="space-y-2 text-gray-400">
               <li>Global Headquarters</li>
               <li>Belfast, Northern Ireland</li>
-              <li>info@stealthtranslations.com</li>
-              <li>+44 28 9099 7000</li>
+              <li>sales@stealthtranslations.com</li>
+              <li>+44 28 28 267 103</li>
             </ul>
           </div>
         </div>
