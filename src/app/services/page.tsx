@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Globe, Brain, Zap, Microscope, Database, FileText, Languages, Users, CheckCircle, ArrowRight, Code, Cpu } from 'lucide-react';
+import Navigation from '@/components/Navigation';
 
 export default function Services() {
   const aiEngineeringServices = [
@@ -96,29 +97,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-2">
-              <Globe className="w-8 h-8 text-emerald-400" />
-              <span className="text-xl font-bold">Stealth Translations</span>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="/" className="hover:text-emerald-400 transition">Home</a>
-              <a href="/services" className="text-emerald-400">Services</a>
-              <a href="/case-studies" className="hover:text-emerald-400 transition">Case Studies</a>
-              <a href="/testimonials" className="hover:text-emerald-400 transition">Testimonials</a>
-              <a href="/team" className="hover:text-emerald-400 transition">Team</a>
-              <a href="/careers" className="hover:text-emerald-400 transition">Careers</a>
-              <a href="/contact" className="hover:text-emerald-400 transition">Contact</a>
-            </div>
-            <button className="bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-full transition">
-              Get Quote
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="/services" />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">

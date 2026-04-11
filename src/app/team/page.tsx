@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Globe, Users, Award, MapPin, Mail, Phone } from 'lucide-react';
+import Navigation from '@/components/Navigation';
 
 export default function Team() {
   const teamMembers = [
@@ -87,28 +88,7 @@ export default function Team() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-2">
-              <Globe className="w-8 h-8 text-blue-400" />
-              <span className="text-xl font-bold">Stealth Translations</span>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="/" className="hover:text-blue-400 transition">Home</a>
-              <a href="/services" className="hover:text-blue-400 transition">Services</a>
-              <a href="/#ai-services" className="hover:text-blue-400 transition">AI Services</a>
-              <a href="/about" className="hover:text-blue-400 transition">About</a>
-              <a href="/team" className="text-blue-400">Team</a>
-              <a href="/contact" className="hover:text-blue-400 transition">Contact</a>
-            </div>
-            <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition">
-              Get Quote
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="/team" />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
