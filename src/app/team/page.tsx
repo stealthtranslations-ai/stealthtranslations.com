@@ -6,40 +6,49 @@ import { Globe, Users, Award, MapPin, Mail, Phone } from 'lucide-react';
 export default function Team() {
   const teamMembers = [
     {
-      name: 'Brano Pajer',
+      name: 'Stephen Weir',
       position: 'Managing Director',
-      image: '/images/team/brano-pajer.jpg',
-      bio: 'Leading our global operations with over 15 years of experience in international business and linguistic services.',
-      location: 'Poland Office',
-      linkedin: '#',
-      email: 'brano.pajer@stealthtranslations.com'
-    },
-    {
-      name: 'David Hill',
-      position: 'Managing Director',
-      image: '/images/team/david-hill.jpg',
-      bio: 'Expert in financial translations and corporate communications, ensuring precision in complex financial documentation.',
-      location: 'UK Headquarters',
-      linkedin: '#',
-      email: 'david.hill@stealthtranslations.com'
-    },
-    {
-      name: 'Aiden Carlin',
-      position: 'Legal Director',
-      image: '/images/team/aiden-carlin.jpg',
-      bio: 'Specializing in legal translations and certification services, maintaining our ISO 17100 standards.',
+      image: '/images/team/stephen-weir.jpg',
+      bio: 'Leading Stealth Translations with strategic vision and operational excellence, driving growth and innovation in translation services.',
       location: 'Belfast Headquarters',
       linkedin: '#',
-      email: 'aiden.carlin@stealthtranslations.com'
+      email: 'stephen.weir@stealthtranslations.com'
     },
     {
-      name: 'Alex Britton',
-      position: 'Technical Director',
-      image: '/images/team/alex-britton.jpg',
-      bio: 'Leading our technical translation and AI integration teams with expertise in engineering and software localization.',
-      location: 'France Office',
+      name: 'Marek Posnik',
+      position: 'Head of IT',
+      image: '/images/team/marek-posnik.jpg',
+      bio: 'Leading our technology infrastructure and software development, ensuring robust systems for our AI-powered translation services.',
+      location: 'Poland Office',
       linkedin: '#',
-      email: 'alex.britton@stealthtranslations.com'
+      email: 'marek.posnik@stealthtranslations.com'
+    },
+    {
+      name: 'Robert Elliott',
+      position: 'Head of Sales',
+      image: '/images/team/robert-elliott.jpg',
+      bio: 'Driving business development and client relationships, expanding our global reach in translation and AI services.',
+      location: 'Belfast Headquarters',
+      linkedin: '#',
+      email: 'robert.elliott@stealthtranslations.com'
+    },
+    {
+      name: 'Adi Shtyla',
+      position: 'Operations Manager',
+      image: '/images/team/adi-shtyla.jpg',
+      bio: 'Managing day-to-day operations and project delivery, ensuring efficiency and quality across all translation services.',
+      location: 'Belfast Headquarters',
+      linkedin: '#',
+      email: 'adi.shtyla@stealthtranslations.com'
+    },
+    {
+      name: 'Florence Shupikai Bondayi',
+      position: 'Finance Manager',
+      image: '/images/team/florence-shupikai.jpg',
+      bio: 'Overseeing financial operations and strategic planning, maintaining fiscal health and compliance for global operations.',
+      location: 'Belfast Headquarters',
+      linkedin: '#',
+      email: 'florence.bondayi@stealthtranslations.com'
     }
   ];
 
@@ -47,7 +56,7 @@ export default function Team() {
     {
       name: 'Executive Leadership',
       description: 'Strategic direction and global operations management',
-      members: 4
+      members: 5
     },
     {
       name: 'Linguistic Team',
@@ -55,24 +64,24 @@ export default function Team() {
       members: 150
     },
     {
-      name: 'AI & Technology',
-      description: 'AI specialists and data scientists',
-      members: 25
+      name: 'Technology & IT',
+      description: 'Software development and infrastructure management',
+      members: 8
     },
     {
-      name: 'Quality Assurance',
-      description: 'ISO certification and quality control experts',
+      name: 'Operations',
+      description: 'Project management and delivery coordination',
       members: 12
     },
     {
-      name: 'Client Services',
-      description: 'Customer support and project management',
-      members: 30
+      name: 'Finance & Administration',
+      description: 'Financial planning and administrative support',
+      members: 6
     },
     {
-      name: 'Sales & Marketing',
-      description: 'Business development and client relations',
-      members: 15
+      name: 'Sales & Business Development',
+      description: 'Client acquisition and relationship management',
+      members: 10
     }
   ];
 
@@ -152,7 +161,7 @@ export default function Team() {
             className="mb-20"
           >
             <h2 className="text-4xl font-bold mb-12 text-center">Leadership Team</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
               {teamMembers.map((member, index) => (
                 <motion.div
                   key={index}
@@ -289,8 +298,8 @@ export default function Team() {
             <ul className="space-y-2 text-gray-400">
               <li>Global Headquarters</li>
               <li>Belfast, Northern Ireland</li>
-              <li>info@stealthtranslations.com</li>
-              <li>+44 28 9099 7000</li>
+              <li>sales@stealthtranslations.com</li>
+              <li>+44 28 28 267 103</li>
             </ul>
           </div>
         </div>
