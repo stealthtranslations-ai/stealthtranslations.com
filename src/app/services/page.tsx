@@ -107,7 +107,10 @@ export default function Services() {
             <div className="hidden md:flex space-x-8">
               <a href="/" className="hover:text-emerald-400 transition">Home</a>
               <a href="/services" className="text-emerald-400">Services</a>
+              <a href="/case-studies" className="hover:text-emerald-400 transition">Case Studies</a>
+              <a href="/testimonials" className="hover:text-emerald-400 transition">Testimonials</a>
               <a href="/team" className="hover:text-emerald-400 transition">Team</a>
+              <a href="/careers" className="hover:text-emerald-400 transition">Careers</a>
               <a href="/contact" className="hover:text-emerald-400 transition">Contact</a>
             </div>
             <button className="bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-full transition">

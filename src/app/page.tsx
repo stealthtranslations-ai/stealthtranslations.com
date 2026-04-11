@@ -28,7 +28,10 @@ export default function Home() {
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="/services" className="hover:text-emerald-400 transition">Services</a>
+              <a href="/case-studies" className="hover:text-emerald-400 transition">Case Studies</a>
+              <a href="/testimonials" className="hover:text-emerald-400 transition">Testimonials</a>
               <a href="/team" className="hover:text-emerald-400 transition">Team</a>
+              <a href="/careers" className="hover:text-emerald-400 transition">Careers</a>
               <a href="/contact" className="hover:text-emerald-400 transition">Contact</a>
             </div>
             <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition">

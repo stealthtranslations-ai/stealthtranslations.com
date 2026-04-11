@@ -6,32 +6,76 @@ import { Globe, Star, CheckCircle, Quote } from 'lucide-react';
 export default function Testimonials() {
   const testimonials = [
     {
-      name: 'Alex Britton',
-      company: 'Whitenoise Studios',
-      content: 'Perfect! Thanks a lot for your help!',
-      rating: 5,
-      service: 'Translation Services'
-    },
-    {
-      name: 'Brano Pajer',
-      company: 'Managing Director, InfoSoft NI Ltd',
-      content: 'Thanks a lot. Exactly what we were looking for!',
-      rating: 5,
-      service: 'Technical Translation'
-    },
-    {
       name: 'Aiden Carlin',
       company: 'Carlin Solicitors',
+      position: 'Senior Partner',
       content: 'Carlin Solicitors instruct Stealth Translations because they consistently provide us with first class translations. With Stealth Translations we are assured of a fast, friendly and efficient service which is customer centred and involves the legal team at every stage. Stealth Translations take time to listen because every customer is different and each case has its own demands in terms of funding, urgency or volume. It is our privilege to highly recommend Stealth Translations to the legal profession in Northern Ireland.',
       rating: 5,
-      service: 'Legal Translation'
+      service: 'Legal Translation',
+      location: 'Belfast, Northern Ireland'
     },
     {
       name: 'David Hill',
-      company: 'Managing Director, Hills Financial Planning',
-      content: 'Great service! The pension documents translated from Norwegian use the correct specific financial terminology and I was kept informed throughout the whole translation process.',
+      company: 'Hills Financial Planning',
+      position: 'Managing Director',
+      content: 'Great service! The pension documents translated from Norwegian use the correct specific financial terminology and I was kept informed throughout the whole translation process. The attention to detail and understanding of financial regulations was impressive.',
       rating: 5,
-      service: 'Financial Translation'
+      service: 'Financial Translation',
+      location: 'Dublin, Ireland'
+    },
+    {
+      name: 'Brano Pajer',
+      company: 'InfoSoft NI Ltd',
+      position: 'Managing Director',
+      content: 'Thanks a lot. Exactly what we were looking for! The technical documentation was translated accurately and delivered on time. Their understanding of software terminology and localization requirements exceeded our expectations.',
+      rating: 5,
+      service: 'Technical Translation',
+      location: 'Belfast, Northern Ireland'
+    },
+    {
+      name: 'Alex Britton',
+      company: 'Whitenoise Studios',
+      position: 'Creative Director',
+      content: 'Perfect! Thanks a lot for your help! The marketing materials and creative content were translated with cultural nuance and creativity that resonated with our target markets across Europe.',
+      rating: 5,
+      service: 'Marketing Translation',
+      location: 'London, UK'
+    },
+    {
+      name: 'Sarah Mitchell',
+      company: 'GlobalTech Solutions',
+      position: 'Project Manager',
+      content: 'Stealth Translations has been our trusted partner for multilingual documentation for over 5 years. Their AI-powered workflow combined with human expertise delivers consistent quality across 15 languages. The team is responsive, professional, and always meets our tight deadlines.',
+      rating: 5,
+      service: 'AI Data Engineering',
+      location: 'New York, USA'
+    },
+    {
+      name: 'Jean-Pierre Dubois',
+      company: 'MedTech International',
+      position: 'Regulatory Affairs Director',
+      content: 'The medical device documentation required precise translation for regulatory submissions across multiple markets. Stealth Translations demonstrated exceptional understanding of medical terminology and regulatory requirements. Their certified translations helped us achieve market entry in record time.',
+      rating: 5,
+      service: 'Medical Translation',
+      location: 'Paris, France'
+    },
+    {
+      name: 'Maria Rodriguez',
+      company: 'EduLearn Systems',
+      position: 'CEO',
+      content: 'Our e-learning platform localization project was complex, involving multimedia content and interactive elements. Stealth Translations handled everything seamlessly - from subtitle translation to cultural adaptation of learning materials. Their attention to detail and educational expertise made all the difference.',
+      rating: 5,
+      service: 'E-learning Localization',
+      location: 'Madrid, Spain'
+    },
+    {
+      name: 'Dr. Michael Chen',
+      company: 'AI Research Labs',
+      position: 'Head of Research',
+      content: 'The multilingual AI training data provided by Stealth Translations was exceptional. Their data collection and annotation services helped us improve our models\' performance across 12 languages. The quality control processes and ethical data sourcing practices were exactly what we needed.',
+      rating: 5,
+      service: 'AI Data Collection',
+      location: 'Singapore'
     }
   ];
 
