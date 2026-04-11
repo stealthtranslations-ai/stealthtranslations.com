@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FileText, CheckCircle, ArrowRight, Globe, Tag, Users, Brain, TrendingUp, Search, Filter, Edit3, Layers } from 'lucide-react';
+import { FileText, CheckCircle, ArrowRight, Globe, Tag, Users, Brain, TrendingUp, Search, Filter, Edit3, Layers, Shield } from 'lucide-react';
 
 export default function DataAnnotation() {
   const capabilities = [
