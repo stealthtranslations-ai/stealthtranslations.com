@@ -86,104 +86,11 @@ export default function Home() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI Post-Editing */}
+            {/* AI Data Collection - Priority 1 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:bg-slate-800/70 transition"
-            >
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">AI Post-Editing</h3>
-              <p className="text-gray-300 mb-6">
-                Enhance machine-translated content with expert human oversight. Our AI-assisted post-editing 
-                ensures nuance, context, and cultural accuracy while maintaining speed and efficiency.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  99%+ accuracy guarantee
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  50% faster than traditional
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Context-aware refinement
-                </li>
-              </ul>
-            </motion.div>
-
-            {/* MTPE */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:bg-slate-800/70 transition"
-            >
-              <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">MTPE Services</h3>
-              <p className="text-gray-300 mb-6">
-                Machine Translation Post-Editing combines cutting-edge MT engines with expert human 
-                linguists to deliver high-quality translations at unprecedented speeds and scale.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Neural MT integration
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Custom engine training
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Real-time quality metrics
-                </li>
-              </ul>
-            </motion.div>
-
-            {/* LLM Training */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:bg-slate-800/70 transition"
-            >
-              <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mb-6">
-                <Microscope className="w-6 h-6" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Multilingual LLM Training</h3>
-              <p className="text-gray-300 mb-6">
-                Specialized training data and methodologies for developing multilingual large language models. 
-                We help create AI that truly understands global languages and cultures.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Custom dataset creation
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Fine-tuning expertise
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Cultural context integration
-                </li>
-              </ul>
-            </motion.div>
-
-            {/* Data Collection */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:bg-slate-800/70 transition"
             >
               <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mb-6">
@@ -194,7 +101,7 @@ export default function Home() {
                 Comprehensive multilingual data collection services for AI training. From parallel corpora 
                 to annotated datasets, we provide the foundation for next-generation language AI.
               </p>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-gray-400 mb-6">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   140+ language coverage
@@ -208,13 +115,17 @@ export default function Home() {
                   Custom data solutions
                 </li>
               </ul>
+              <a href="/services/ai-data-collection" className="inline-flex items-center bg-orange-600 hover:bg-orange-700 px-6 py-3 rounded-full font-semibold transition">
+                Learn More
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
             </motion.div>
 
-            {/* Annotation Services */}
+            {/* Data Annotation - Priority 2 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:bg-slate-800/70 transition"
             >
               <div className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center mb-6">
@@ -225,7 +136,7 @@ export default function Home() {
                 Expert linguistic annotation services for machine learning. Our team provides precise 
                 labeling, tagging, and classification to train superior AI models.
               </p>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-gray-400 mb-6">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   NLP annotation experts
@@ -239,37 +150,150 @@ export default function Home() {
                   Scalable operations
                 </li>
               </ul>
+              <a href="/services/data-annotation" className="inline-flex items-center bg-pink-600 hover:bg-pink-700 px-6 py-3 rounded-full font-semibold transition">
+                Learn More
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
             </motion.div>
 
-            {/* Traditional Services */}
+            {/* AI Data Engineering - Priority 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:bg-slate-800/70 transition"
+            >
+              <div className="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center mb-6">
+                <Database className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">AI Data Engineering</h3>
+              <p className="text-gray-300 mb-6">
+                Professional AI data engineering solutions including data pipelines, cloud architectures, 
+                and ETL systems for machine learning workflows.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-400 mb-6">
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  Data pipeline architecture
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  Cloud data solutions
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  ETL development
+                </li>
+              </ul>
+              <a href="/services/ai-data-engineering" className="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-full font-semibold transition">
+                Learn More
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
+            </motion.div>
+
+            {/* Multilingual LLM Training - Priority 4 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:bg-slate-800/70 transition"
+            >
+              <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mb-6">
+                <Microscope className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Multilingual LLM Training</h3>
+              <p className="text-gray-300 mb-6">
+                Specialized training data and methodologies for developing multilingual large language models. 
+                We help create AI that truly understands global languages and cultures.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-400 mb-6">
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  Custom dataset creation
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  Fine-tuning expertise
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  Cultural context integration
+                </li>
+              </ul>
+              <a href="/services/multilingual-llm-training" className="inline-flex items-center bg-green-600 hover:bg-green-700 px-6 py-3 rounded-full font-semibold transition">
+                Learn More
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
+            </motion.div>
+
+            {/* MTPE Services - Priority 5 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:bg-slate-800/70 transition"
+            >
+              <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-6">
+                <Zap className="w-6 h-6" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">MTPE Services</h3>
+              <p className="text-gray-300 mb-6">
+                Machine Translation Post-Editing combines cutting-edge MT engines with expert human 
+                linguists to deliver high-quality translations at unprecedented speeds and scale.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-400 mb-6">
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  Neural MT integration
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  Custom engine training
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  Real-time quality metrics
+                </li>
+              </ul>
+              <a href="/services/mtpe-services" className="inline-flex items-center bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-full font-semibold transition">
+                Learn More
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
+            </motion.div>
+
+            {/* AI Post-Editing - Priority 6 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:bg-slate-800/70 transition"
             >
-              <div className="w-12 h-12 bg-cyan-600 rounded-full flex items-center justify-center mb-6">
-                <Languages className="w-6 h-6" />
+              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-6">
+                <Brain className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Traditional Translation</h3>
+              <h3 className="text-2xl font-bold mb-4">AI Post-Editing</h3>
               <p className="text-gray-300 mb-6">
-                ISO 17100 certified translation services across technical, legal, medical, and financial domains. 
-                Human expertise combined with AI-powered quality assurance.
+                Enhance machine-translated content with expert human oversight. Our AI-assisted post-editing 
+                ensures nuance, context, and cultural accuracy while maintaining speed and efficiency.
               </p>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-gray-400 mb-6">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Certified translators
+                  99%+ accuracy guarantee
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  Subject matter experts
+                  50% faster than traditional
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  24/7 delivery options
+                  Context-aware refinement
                 </li>
               </ul>
+              <a href="/services/ai-post-editing" className="inline-flex items-center bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-semibold transition">
+                Learn More
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </a>
             </motion.div>
           </div>
         </div>
