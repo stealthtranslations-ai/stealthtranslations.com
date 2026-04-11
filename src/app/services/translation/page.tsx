@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Languages, CheckCircle, ArrowRight, Globe, Users, FileText, Star, Clock, Shield } from 'lucide-react';
+import Navigation from '@/components/Navigation';
 
 export default function Translation() {
   const features = [
@@ -52,26 +53,7 @@ export default function Translation() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-2">
-              <Globe className="w-8 h-8 text-blue-400" />
-              <span className="text-xl font-bold">Stealth Translations</span>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="/services" className="hover:text-blue-400 transition">Services</a>
-              <a href="/services/translation" className="text-blue-400">Translation</a>
-              <a href="/about" className="hover:text-blue-400 transition">About</a>
-              <a href="/contact" className="hover:text-blue-400 transition">Contact</a>
-            </div>
-            <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition">
-              Get Quote
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="/services/translation" />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">

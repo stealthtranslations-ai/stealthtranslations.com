@@ -99,26 +99,7 @@ export default function AIDataCollection() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900 text-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-2">
-              <Globe className="w-8 h-8 text-orange-400" />
-              <span className="text-xl font-bold">Stealth Translations</span>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="/services" className="hover:text-orange-400 transition">Services</a>
-              <a href="/services/ai-data-collection" className="text-orange-400">AI Data Collection</a>
-              <a href="/about" className="hover:text-orange-400 transition">About</a>
-              <a href="/contact" className="hover:text-orange-400 transition">Contact</a>
-            </div>
-            <button className="bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-full transition">
-              Get Quote
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="/services/ai-data-collection" />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
