@@ -56,7 +56,8 @@ export default function Services() {
       description: 'Enhance machine-translated content with expert human oversight. Our AI-assisted post-editing ensures nuance, context, and cultural accuracy.',
       features: ['99%+ accuracy guarantee', '50% faster than traditional', 'Context-aware refinement', 'Quality metrics'],
       color: 'bg-blue-600',
-      price: '$0.03 - $0.08 per word'
+      price: '$0.03 - $0.08 per word',
+      link: '/services/ai-post-editing'
     },
     {
       icon: Zap,
@@ -64,7 +65,8 @@ export default function Services() {
       description: 'Machine Translation Post-Editing combines cutting-edge MT engines with expert human linguists to deliver high-quality translations.',
       features: ['Neural MT integration', 'Custom engine training', 'Real-time quality metrics', 'Scalable solutions'],
       color: 'bg-purple-600',
-      price: '$0.02 - $0.06 per word'
+      price: '$0.02 - $0.06 per word',
+      link: '/services/mtpe-services'
     },
     {
       icon: Microscope,
@@ -72,7 +74,8 @@ export default function Services() {
       description: 'Specialized training data and methodologies for developing multilingual large language models.',
       features: ['Custom dataset creation', 'Fine-tuning expertise', 'Cultural context integration', 'Model optimization'],
       color: 'bg-green-600',
-      price: 'Custom pricing'
+      price: 'Custom pricing',
+      link: '/services/multilingual-llm-training'
     },
     {
       icon: Database,
@@ -80,7 +83,8 @@ export default function Services() {
       description: 'Comprehensive multilingual data collection services for AI training. From parallel corpora to annotated datasets.',
       features: ['140+ language coverage', 'Quality-verified datasets', 'Custom data solutions', 'Ethical sourcing'],
       color: 'bg-orange-600',
-      price: 'Custom pricing'
+      price: 'Custom pricing',
+      link: '/services/ai-data-collection'
     },
     {
       icon: FileText,
@@ -88,7 +92,8 @@ export default function Services() {
       description: 'Expert linguistic annotation services for machine learning. Our team provides precise labeling, tagging, and classification.',
       features: ['NLP annotation experts', 'Quality assurance protocols', 'Scalable operations', 'Multiple annotation types'],
       color: 'bg-pink-600',
-      price: 'Custom pricing'
+      price: 'Custom pricing',
+      link: '/services/data-annotation'
     }
   ];
 
@@ -130,91 +135,101 @@ export default function Services() {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Our Services
+              AI-Powered Translation Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Browse our range of linguistic services which we have fine-tuned over more than 20 years, 
-              now enhanced with cutting-edge AI technology.
+              Leading the future of translation with AI-driven solutions. 80% of our business focuses on 
+              advanced AI services combining cutting-edge technology with human expertise.
             </p>
           </motion.div>
 
-          {/* Traditional Services */}
+          {/* AI Services - Primary Focus */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-20"
           >
-            <h2 className="text-4xl font-bold mb-12 text-center">Traditional Translation Services</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {traditionalServices.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:bg-slate-800/70 transition group"
-                >
-                  <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition`}>
-                    <service.icon className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="text-blue-400 hover:text-blue-300 font-semibold flex items-center group">
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition" />
-                  </button>
-                </motion.div>
-              ))}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">
+                <span className="text-blue-400">AI-Powered</span> Translation Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our core focus - 80% of our business is now AI-driven translation solutions combining cutting-edge technology with human expertise
+              </p>
             </div>
-          </motion.div>
-
-          {/* AI Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-20"
-          >
-            <h2 className="text-4xl font-bold mb-12 text-center">
-              Advanced <span className="text-blue-400">AI Services</span>
-            </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                  className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:bg-slate-800/70 transition group relative overflow-hidden"
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800/60 to-blue-900/30 border border-blue-400/20 rounded-2xl p-8 hover:bg-gradient-to-br hover:from-slate-800/70 hover:to-blue-900/40 transition group relative overflow-hidden"
                 >
-                  <div className="absolute top-4 right-4 bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute top-4 right-4 bg-blue-600/30 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold border border-blue-400/30">
                     {service.price}
                   </div>
-                  <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition`}>
+                  <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition shadow-lg shadow-blue-500/20`}>
                     <service.icon className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <h3 className="text-2xl font-bold mb-4 text-blue-100">{service.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={i} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <button className="text-blue-400 hover:text-blue-300 font-semibold flex items-center group">
+                  <a href={service.link} className="bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 border border-blue-400/30 px-4 py-2 rounded-lg font-semibold flex items-center group transition">
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition" />
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Traditional Services */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mb-20"
+          >
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-gray-400">Traditional Translation Services</h2>
+              <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+                Supporting our AI services with traditional human expertise for specialized requirements
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {traditionalServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 + index * 0.05 }}
+                  className="bg-slate-800/30 border border-white/5 rounded-2xl p-6 hover:bg-slate-800/40 transition group"
+                >
+                  <div className={`w-12 h-12 ${service.color} rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition opacity-80`}>
+                    <service.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-300">{service.title}</h3>
+                  <p className="text-gray-400 mb-4 text-sm leading-relaxed">{service.description}</p>
+                  <ul className="space-y-1 mb-4">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-center text-xs text-gray-500">
+                        <CheckCircle className="w-3 h-3 text-gray-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="text-gray-400 hover:text-gray-300 font-medium text-sm flex items-center group">
+                    Learn More
+                    <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition" />
                   </button>
                 </motion.div>
               ))}
