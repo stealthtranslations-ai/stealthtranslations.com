@@ -16,14 +16,8 @@ export default function VideoSplash() {
       setCanSkip(true);
     }, 2000);
 
-    // Auto-hide after video ends (approximately 30 seconds)
-    const hideTimer = setTimeout(() => {
-      setIsVisible(false);
-    }, 30000);
-
     return () => {
       clearTimeout(skipTimer);
-      clearTimeout(hideTimer);
     };
   }, []);
 
@@ -32,7 +26,8 @@ export default function VideoSplash() {
   };
 
   const handleVideoEnd = () => {
-    setIsVisible(false);
+    // Video will loop automatically due to loop attribute
+    // Don't hide the splash
   };
 
   const handleSkip = () => {
@@ -68,6 +63,7 @@ export default function VideoSplash() {
             autoPlay
             muted={isMuted}
             playsInline
+            loop
             onPlay={handleVideoPlay}
             onEnded={handleVideoEnd}
             style={{
