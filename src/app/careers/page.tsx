@@ -28,50 +28,48 @@ export default function Careers() {
     }
   ];
 
-  const openPositions = [
-    {
-      title: 'Senior AI Data Engineer',
-      department: 'AI Engineering',
-      location: 'Belfast, Northern Ireland',
-      type: 'Full-time',
-      description: 'Lead data engineering projects for AI/ML applications with multilingual capabilities.'
-    },
-    {
-      title: 'Machine Learning Engineer',
-      department: 'AI Engineering',
-      location: 'Warsaw, Poland',
-      type: 'Full-time',
-      description: 'Develop and optimize ML models for multilingual applications and training data.'
-    },
-    {
-      title: 'Senior Project Manager',
-      department: 'Operations',
-      location: 'Belfast, Northern Ireland',
-      type: 'Full-time',
-      description: 'Manage complex translation and AI projects for global enterprise clients.'
-    },
-    {
-      title: 'Business Development Manager',
-      department: 'Sales',
-      location: 'London, UK',
-      type: 'Full-time',
-      description: 'Drive growth in AI services and traditional translation offerings.'
-    },
-    {
-      title: 'Senior Translator (German)',
-      department: 'Translation',
-      location: 'Remote',
-      type: 'Contract',
-      description: 'Technical translation services for AI training data and traditional projects.'
-    },
-    {
-      title: 'Data Annotation Specialist',
-      department: 'AI Services',
-      location: 'Manila, Philippines',
-      type: 'Full-time',
-      description: 'Quality annotation and data preparation for AI training datasets.'
-    }
-  ];
+  const languages = [
+  'English', 'Spanish', 'French', 'German', 'Italian', 'Portuguese', 'Dutch', 'Swedish', 'Norwegian', 'Danish',
+  'Finnish', 'Polish', 'Czech', 'Hungarian', 'Romanian', 'Bulgarian', 'Croatian', 'Serbian', 'Slovak', 'Slovenian',
+  'Estonian', 'Latvian', 'Lithuanian', 'Greek', 'Turkish', 'Russian', 'Ukrainian', 'Arabic', 'Hebrew', 'Persian',
+  'Hindi', 'Bengali', 'Urdu', 'Punjabi', 'Gujarati', 'Tamil', 'Telugu', 'Marathi', 'Kannada', 'Malayalam',
+  'Chinese (Mandarin)', 'Cantonese', 'Japanese', 'Korean', 'Thai', 'Vietnamese', 'Indonesian', 'Malay', 'Filipino'
+];
+
+interface Position {
+  title: string;
+  department: string;
+  location: string;
+  type: string;
+  description: string;
+  trackingId: string;
+}
+
+const openPositions: Position[] = [];
+
+// Generate Voice Talent positions for each language
+languages.forEach(language => {
+  openPositions.push({
+    title: `Voice Talent (${language})`,
+    department: 'Voice Services',
+    location: 'Remote',
+    type: 'Contract',
+    description: `Professional voice recording services for ${language} content including e-learning, commercials, and corporate videos. Native speakers with professional recording experience preferred.`,
+    trackingId: `voice-${language.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}`
+  });
+});
+
+// Generate Data Annotation Specialist positions for each language
+languages.forEach(language => {
+  openPositions.push({
+    title: `Data Annotation Specialist (${language})`,
+    department: 'AI Services',
+    location: 'Remote',
+    type: 'Contract',
+    description: `Data annotation and quality assurance for AI training datasets in ${language}. Attention to detail and understanding of AI/ML requirements essential. Previous annotation experience preferred.`,
+    trackingId: `annotation-${language.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}`
+  });
+});
 
   const cultureValues = [
     {
@@ -208,9 +206,12 @@ export default function Careers() {
                         </span>
                       </div>
                     </div>
-                    <button className="mt-4 md:mt-0 bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold transition">
+                    <a 
+                      href={`/contact?position=${encodeURIComponent(position.title)}&tracking=${position.trackingId}`}
+                      className="mt-4 md:mt-0 bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold transition inline-block text-center"
+                    >
                       Apply Now
-                    </button>
+                    </a>
                   </div>
                   <p className="text-gray-300">{position.description}</p>
                 </motion.div>
