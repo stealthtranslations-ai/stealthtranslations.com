@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FileText, CheckCircle, ArrowRight, Globe, Brain, Database, Shield, Star, Zap, Code, Cpu, Cloud, BarChart } from 'lucide-react';
+import Navigation from '@/components/Navigation';
 
 export default function AIDataEngineering() {
   const services = [

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Database, CheckCircle, ArrowRight, Globe, Shield, Users, FileText, TrendingUp, Search, Filter, Download } from 'lucide-react';
+import Navigation from '@/components/Navigation';
 
 export default function AIDataCollection() {
   const capabilities = [
