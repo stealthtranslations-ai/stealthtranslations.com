@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     // Send email to Stealth Translations
     const emailResult = await resend.emails.send({
       from: 'contact@stealthtranslations.com',
-      to: 'info@stealthtranslations.com',
+      to: 'sales@stealthtranslations.com',
       subject: `New Contact Form Submission - ${service || 'General Inquiry'}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f8f9fa;">
@@ -103,14 +103,14 @@ export async function POST(request: NextRequest) {
               </p>
               
               <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px;">
-                We typically respond within 24 hours during business days. If your matter is urgent, please don't hesitate to call us directly at +44 (0) 28 9099 7000.
+                We typically respond within 24 hours during business days. If your matter is urgent, please don't hesitate to call us directly at +44 28 28 267 103.
               </p>
               
               <div style="background-color: #f8fafc; padding: 20px; border-radius: 5px; margin: 20px 0;">
                 <h3 style="color: #1e293b; margin-bottom: 10px;">Contact Information:</h3>
                 <ul style="color: #64748b; margin: 0; padding-left: 20px;">
-                  <li>Email: info@stealthtranslations.com</li>
-                  <li>Phone: +44 (0) 28 9099 7000</li>
+                  <li>Email: sales@stealthtranslations.com</li>
+                  <li>Phone: +44 28 28 267 103</li>
                   <li>Hours: Monday-Friday, 9AM-6PM GMT</li>
                 </ul>
               </div>

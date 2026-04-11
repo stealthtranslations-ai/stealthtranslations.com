@@ -88,8 +88,8 @@ export default function Contact() {
             <ul className="space-y-2 text-gray-400">
               <li>Global Headquarters</li>
               <li>Belfast, Northern Ireland</li>
-              <li>info@stealthtranslations.com</li>
-              <li>+44 28 9099 7000</li>
+              <li>sales@stealthtranslations.com</li>
+              <li>+44 28 28 267 103</li>
             </ul>
           </div>
         </div>

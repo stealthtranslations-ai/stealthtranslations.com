@@ -90,7 +90,7 @@ export default function ContactForm() {
           </div>
           <div>
             <h4 className="text-white font-semibold mb-1">Email Us</h4>
-            <p className="text-gray-300">info@stealthtranslations.com</p>
+            <p className="text-gray-300">sales@stealthtranslations.com</p>
             <p className="text-gray-400 text-sm">We respond within 24 hours</p>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function ContactForm() {
           </div>
           <div>
             <h4 className="text-white font-semibold mb-1">Call Us</h4>
-            <p className="text-gray-300">+44 (0) 28 9099 7000</p>
+            <p className="text-gray-300">+44 28 28 267 103</p>
             <p className="text-gray-400 text-sm">Mon-Fri 9AM-6PM GMT</p>
           </div>
         </div>
@@ -214,7 +214,7 @@ export default function ContactForm() {
             className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="">Select a service...</option>
-            <optgroup label="AI Services (80% Focus)">
+            <optgroup label="AI-Powered Services">
               <option value="ai-post-editing">AI Post-Editing</option>
               <option value="mtpe-services">MTPE Services</option>
               <option value="multilingual-llm-training">Multilingual LLM Training</option>
