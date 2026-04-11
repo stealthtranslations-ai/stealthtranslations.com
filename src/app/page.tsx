@@ -27,11 +27,9 @@ export default function Home() {
               <span className="text-xl font-bold">Stealth Translations</span>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="/services" className="hover:text-blue-400 transition">Services</a>
-              <a href="#ai-services" className="hover:text-blue-400 transition">AI Services</a>
-              <a href="/about" className="hover:text-blue-400 transition">About</a>
-              <a href="/team" className="hover:text-blue-400 transition">Team</a>
-              <a href="/contact" className="hover:text-blue-400 transition">Contact</a>
+              <a href="/services" className="hover:text-emerald-400 transition">Services</a>
+              <a href="/team" className="hover:text-emerald-400 transition">Team</a>
+              <a href="/contact" className="hover:text-emerald-400 transition">Contact</a>
             </div>
             <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition">
               Get Quote
