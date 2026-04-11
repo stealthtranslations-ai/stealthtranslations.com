@@ -141,9 +141,9 @@ export default function AIDataCollection() {
             <p className="text-orange-100 mb-6">
               Access ethically sourced, high-quality multilingual datasets trusted by leading AI companies.
             </p>
-            <button className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold transition">
+            <a href="/contact" className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold transition">
               Request Data Consultation
-            </button>
+            </a>
           </motion.div>
 
           {/* Capabilities Section */}
