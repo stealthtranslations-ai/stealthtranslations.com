@@ -139,13 +139,10 @@ export default function MultilingualLLMTraining() {
               Build AI that truly understands and communicates across languages and cultures.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+              <a href="/contact" className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
-                View Case Studies
-              </button>
+              </a>
             </div>
           </motion.div>
 
@@ -162,9 +159,9 @@ export default function MultilingualLLMTraining() {
             <p className="text-green-100 mb-6">
               Leverage our expertise in multilingual AI to create models that understand cultural nuance and context.
             </p>
-            <button className="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold transition">
+            <a href="/contact" className="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold transition">
               Schedule Consultation
-            </button>
+            </a>
           </motion.div>
 
           {/* Capabilities Section */}

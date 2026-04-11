@@ -144,13 +144,10 @@ export default function DataAnnotation() {
               labeling, tagging, and classification to train your AI models effectively.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-pink-600 hover:bg-pink-700 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+              <a href="/contact" className="bg-pink-600 hover:bg-pink-700 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
                 Start Annotation Project
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
-                View Annotation Samples
-              </button>
+              </a>
             </div>
           </motion.div>
 

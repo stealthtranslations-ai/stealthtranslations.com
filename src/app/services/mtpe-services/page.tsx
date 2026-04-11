@@ -120,9 +120,6 @@ export default function MTPEServices() {
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
-                View Demo
-              </button>
             </div>
           </motion.div>
 
@@ -139,9 +136,9 @@ export default function MTPEServices() {
             <p className="text-purple-100 mb-6">
               Experience 10x faster translation with 95%+ accuracy. Perfect for high-volume content needs.
             </p>
-            <button className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold transition">
+            <a href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold transition">
               Try Free Sample
-            </button>
+            </a>
           </motion.div>
 
           {/* Benefits Section */}
@@ -325,13 +322,10 @@ export default function MTPEServices() {
               Join leading companies using MTPE for high-volume, high-quality translations at scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+              <a href="/contact" className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
-                Schedule Demo
-              </button>
             </div>
           </motion.div>
         </div>

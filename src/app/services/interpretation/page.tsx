@@ -97,9 +97,6 @@ export default function Interpretation() {
                 Get Interpretation Quote
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
-                View Our Interpreters
-              </button>
             </div>
           </motion.div>
 

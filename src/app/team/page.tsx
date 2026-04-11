@@ -218,12 +218,12 @@ export default function Team() {
               to join our global team. Explore career opportunities at Stealth Translations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition">
+              <a href="/careers" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition">
                 View Open Positions
-              </button>
-              <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
+              </a>
+              <a href="/contact" className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
                 Send Your CV
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>
