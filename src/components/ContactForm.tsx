@@ -215,6 +215,7 @@ export default function ContactForm() {
           >
             <option value="">Select a service...</option>
             <optgroup label="AI-Powered Services">
+              <option value="ai-data-engineering">AI Data Engineering</option>
               <option value="ai-post-editing">AI Post-Editing</option>
               <option value="mtpe-services">MTPE Services</option>
               <option value="multilingual-llm-training">Multilingual LLM Training</option>

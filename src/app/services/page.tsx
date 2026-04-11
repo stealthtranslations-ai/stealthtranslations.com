@@ -57,6 +57,14 @@ export default function Services() {
 
   const aiServices = [
     {
+      icon: Database,
+      title: 'AI Data Engineering',
+      description: 'Transform your data into AI-ready assets with comprehensive data engineering solutions. Build robust, scalable data pipelines for cutting-edge AI applications.',
+      features: ['Data pipeline architecture', 'Cloud data solutions', 'ETL/ELT development', 'Real-time processing'],
+      color: 'bg-emerald-600',
+      link: '/services/ai-data-engineering'
+    },
+    {
       icon: Brain,
       title: 'AI Post-Editing',
       description: 'Enhance machine-translated content with expert human oversight. Our AI-assisted post-editing ensures nuance, context, and cultural accuracy.',
@@ -67,32 +75,32 @@ export default function Services() {
     {
       icon: Zap,
       title: 'MTPE Services',
-      description: 'Machine Translation Post-Editing combines cutting-edge MT engines with expert human linguists to deliver high-quality translations.',
-      features: ['Neural MT integration', 'Custom engine training', 'Real-time quality metrics', 'Scalable solutions'],
+      description: 'Machine Translation Post-Editing combines AI speed with human expertise. Perfect for large-scale projects requiring both efficiency and quality.',
+      features: ['Neural MT integration', 'Human expert review', 'Terminology consistency', 'Rapid turnaround'],
       color: 'bg-purple-600',
       link: '/services/mtpe-services'
     },
     {
       icon: Microscope,
       title: 'Multilingual LLM Training',
-      description: 'Specialized training data and methodologies for developing multilingual large language models.',
-      features: ['Custom dataset creation', 'Fine-tuning expertise', 'Cultural context integration', 'Model optimization'],
+      description: 'Prepare your AI models for global markets with specialized multilingual training data and fine-tuning services.',
+      features: ['Custom dataset creation', 'Cross-lingual training', 'Domain adaptation', 'Model optimization'],
       color: 'bg-green-600',
       link: '/services/multilingual-llm-training'
     },
     {
       icon: Database,
       title: 'AI Data Collection',
-      description: 'Comprehensive multilingual data collection services for AI training. From parallel corpora to annotated datasets.',
-      features: ['140+ language coverage', 'Quality-verified datasets', 'Custom data solutions', 'Ethical sourcing'],
+      description: 'Gather high-quality, diverse training data for your AI models. We ensure ethical data sourcing and comprehensive coverage.',
+      features: ['Ethical data sourcing', 'Quality assurance', 'Diverse datasets', 'Privacy compliance'],
       color: 'bg-orange-600',
       link: '/services/ai-data-collection'
     },
     {
       icon: FileText,
       title: 'Data Annotation',
-      description: 'Expert linguistic annotation services for machine learning. Our team provides precise labeling, tagging, and classification.',
-      features: ['NLP annotation experts', 'Quality assurance protocols', 'Scalable operations', 'Multiple annotation types'],
+      description: 'Precise data annotation services to train your AI models. Our experts ensure accuracy and consistency across all annotation types.',
+      features: ['Multi-format support', 'Expert annotators', 'Quality control', 'Scalable solutions'],
       color: 'bg-pink-600',
       link: '/services/data-annotation'
     }
