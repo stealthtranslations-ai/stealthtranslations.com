@@ -15,16 +15,34 @@ import {
   Star 
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
-import VideoSplash from '@/components/VideoSplash';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <VideoSplash />
       <Navigation currentPage="" />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen">
+        {/* Video Background */}
+        <div className="absolute inset-0">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            style={{
+              objectFit: 'cover',
+            }}
+          >
+            <source src="/videos/intro.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+        </div>
+        
         {/* Animated AI Background */}
         <div className="absolute inset-0">
           {/* Gradient Base */}
