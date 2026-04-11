@@ -7,19 +7,6 @@
   "env": {
     "NEXT_PUBLIC_SITE_URL": "https://stealthtranslations.com"
   },
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://stealthtranslations.com/$1",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.stealthtranslations.com"
-        }
-      ],
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
