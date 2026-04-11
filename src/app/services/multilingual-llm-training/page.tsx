@@ -374,9 +374,10 @@ export default function MultilingualLLMTraining() {
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
-                Download Whitepaper
-              </button>
+              <a href="/contact" className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+                <ArrowRight className="ml-2 w-5 h-5" />
+                Get Quote
+              </a>
             </div>
           </motion.div>
         </div>

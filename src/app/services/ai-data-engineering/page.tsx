@@ -113,11 +113,9 @@ export default function AIDataEngineering() {
                 Get Data Engineering Quote
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a href="/sell-sheets/ai-data-collection-annotation-sell-sheet.zip" 
-                 download 
-                 className="border-2 border-emerald-400 hover:bg-emerald-400/10 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
-                <FileText className="mr-2 w-5 h-5" />
-                Download Sell Sheet
+              <a href="/contact" className="border-2 border-emerald-400 hover:bg-emerald-400/10 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+                <ArrowRight className="ml-2 w-5 h-5" />
+                Get Quote
               </a>
             </div>
           </motion.div>
@@ -249,11 +247,9 @@ export default function AIDataEngineering() {
                 Start Your Data Engineering Project
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a href="/sell-sheets/ai-data-collection-annotation-sell-sheet.zip" 
-                 download 
-                 className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
-                <FileText className="mr-2 w-5 h-5" />
-                Download Detailed Information
+              <a href="/services" className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+                <ArrowRight className="ml-2 w-5 h-5" />
+                View All Services
               </a>
             </div>
           </motion.div>

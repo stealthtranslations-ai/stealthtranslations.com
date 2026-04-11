@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Database, CheckCircle, ArrowRight, Globe, Shield, Users, FileText, TrendingUp, Search, Filter, Download } from 'lucide-react';
+import { Database, CheckCircle, ArrowRight, Globe, Shield, Users, FileText, TrendingUp, Search, Filter } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 
 export default function AIDataCollection() {
@@ -376,9 +376,10 @@ export default function AIDataCollection() {
                 Start Data Collection
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <button className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition">
-                Download Data Catalog
-              </button>
+              <a href="/contact" className="border-2 border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center">
+                <ArrowRight className="ml-2 w-5 h-5" />
+                Get Quote
+              </a>
             </div>
           </motion.div>
         </div>
