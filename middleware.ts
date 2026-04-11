@@ -4,18 +4,10 @@ import type { NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host')
   
-  // Redirect www to non-www
+  // Only redirect www to non-www to avoid circular loops
   if (hostname === 'www.stealthtranslations.com') {
     const url = request.nextUrl.clone()
     url.host = 'stealthtranslations.com'
-    return NextResponse.redirect(url, 301)
-  }
-  
-  // Redirect Vercel preview URL to production domain
-  if (hostname?.includes('vercel.app')) {
-    const url = request.nextUrl.clone()
-    url.host = 'stealthtranslations.com'
-    url.protocol = 'https'
     return NextResponse.redirect(url, 301)
   }
   
