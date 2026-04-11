@@ -7,108 +7,90 @@ import Navigation from '@/components/Navigation';
 export default function Testimonials() {
   const testimonials = [
     {
-      name: 'Aiden Carlin',
-      company: 'Carlin Solicitors',
-      position: 'Senior Partner',
-      content: 'Carlin Solicitors instruct Stealth Translations because they consistently provide us with first class translations. With Stealth Translations we are assured of a fast, friendly and efficient service which is customer centred and involves the legal team at every stage. Stealth Translations take time to listen because every customer is different and each case has its own demands in terms of funding, urgency or volume. It is our privilege to highly recommend Stealth Translations to the legal profession in Northern Ireland.',
-      rating: 5,
-      service: 'Legal Translation',
-      location: 'Belfast, Northern Ireland'
-    },
-    {
-      name: 'David Hill',
-      company: 'Hills Financial Planning',
-      position: 'Managing Director',
-      content: 'Great service! The pension documents translated from Norwegian use the correct specific financial terminology and I was kept informed throughout the whole translation process. The attention to detail and understanding of financial regulations was impressive.',
-      rating: 5,
-      service: 'Financial Translation',
-      location: 'Dublin, Ireland'
-    },
-    {
-      name: 'Brano Pajer',
-      company: 'InfoSoft NI Ltd',
-      position: 'Managing Director',
-      content: 'Thanks a lot. Exactly what we were looking for! The technical documentation was translated accurately and delivered on time. Their understanding of software terminology and localization requirements exceeded our expectations.',
-      rating: 5,
-      service: 'Technical Translation',
-      location: 'Belfast, Northern Ireland'
-    },
-    {
-      name: 'Alex Britton',
-      company: 'Whitenoise Studios',
-      position: 'Creative Director',
-      content: 'Perfect! Thanks a lot for your help! The marketing materials and creative content were translated with cultural nuance and creativity that resonated with our target markets across Europe.',
-      rating: 5,
-      service: 'Marketing Translation',
-      location: 'London, UK'
-    },
-    {
-      name: 'Sarah Mitchell',
-      company: 'GlobalTech Solutions',
-      position: 'Project Manager',
-      content: 'Stealth Translations has been our trusted partner for multilingual documentation for over 5 years. Their AI-powered workflow combined with human expertise delivers consistent quality across 15 languages. The team is responsive, professional, and always meets our tight deadlines.',
-      rating: 5,
-      service: 'AI Data Engineering',
-      location: 'New York, USA'
-    },
-    {
-      name: 'Jean-Pierre Dubois',
-      company: 'MedTech International',
-      position: 'Regulatory Affairs Director',
-      content: 'The medical device documentation required precise translation for regulatory submissions across multiple markets. Stealth Translations demonstrated exceptional understanding of medical terminology and regulatory requirements. Their certified translations helped us achieve market entry in record time.',
-      rating: 5,
-      service: 'Medical Translation',
-      location: 'Paris, France'
-    },
-    {
-      name: 'Maria Rodriguez',
-      company: 'EduLearn Systems',
-      position: 'CEO',
-      content: 'Our e-learning platform localization project was complex, involving multimedia content and interactive elements. Stealth Translations handled everything seamlessly - from subtitle translation to cultural adaptation of learning materials. Their attention to detail and educational expertise made all the difference.',
-      rating: 5,
-      service: 'E-learning Localization',
-      location: 'Madrid, Spain'
-    },
-    {
-      name: 'Dr. Michael Chen',
-      company: 'AI Research Labs',
-      position: 'Head of Research',
-      content: 'The multilingual AI training data provided by Stealth Translations was exceptional. Their data collection and annotation services helped us improve our models\' performance across 12 languages. The quality control processes and ethical data sourcing practices were exactly what we needed.',
+      client: 'Leading AI Research Company',
+      industry: 'Artificial Intelligence',
+      content: 'Stealth Translations has become our preferred supplier for multilingual data collection. Their professional workflows and ethical data sourcing practices align perfectly with our R&D requirements. The quality control processes and attention to data privacy make them an ideal partner for sensitive AI training projects.',
       rating: 5,
       service: 'AI Data Collection',
-      location: 'Singapore'
+      region: 'North America',
+      projectType: 'Confidential R&D'
+    },
+    {
+      client: 'Global Technology Corporation',
+      industry: 'Machine Learning',
+      content: 'The data annotation quality and workflow professionalism exceeded our expectations. Their team understands the specific requirements of ML training data and maintains the highest standards for accuracy and consistency. We\'ve made them our go-to partner for all multilingual annotation needs.',
+      rating: 5,
+      service: 'Data Annotation',
+      region: 'Asia Pacific',
+      projectType: 'Proprietary Model Training'
+    },
+    {
+      client: 'Major Automotive AI Developer',
+      industry: 'Autonomous Vehicles',
+      content: 'Professional workflows and exceptional data quality are why we continue to work with Stealth Translations. Their understanding of automotive AI requirements and ability to handle large-scale multilingual datasets while maintaining confidentiality is impressive. They\'ve become an integral part of our development pipeline.',
+      rating: 5,
+      service: 'AI Data Engineering',
+      region: 'Europe',
+      projectType: 'Autonomous Driving Systems'
+    },
+    {
+      client: 'Healthcare AI Company',
+      industry: 'Medical AI',
+      content: 'The medical data annotation expertise and privacy-first approach made them the perfect partner for our healthcare AI projects. Their professional team understands the regulatory requirements and maintains the highest standards for data security and accuracy in medical contexts.',
+      rating: 5,
+      service: 'Medical Data Annotation',
+      region: 'North America',
+      projectType: 'Healthcare AI Development'
+    },
+    {
+      client: 'Enterprise Software Leader',
+      industry: 'Enterprise AI',
+      content: 'Their multilingual LLM training data services have been instrumental in improving our models\' performance across global markets. The professional project management and quality assurance processes ensure consistent delivery of high-quality training datasets for our enterprise applications.',
+      rating: 5,
+      service: 'Multilingual LLM Training',
+      region: 'Global',
+      projectType: 'Enterprise AI Solutions'
+    },
+    {
+      client: 'Financial Technology Firm',
+      industry: 'FinTech',
+      content: 'The data engineering solutions provided for our AI systems have been exceptional. Their team understands the complexity of financial data requirements and delivers robust, scalable solutions that meet our stringent security and compliance needs.',
+      rating: 5,
+      service: 'AI Data Engineering',
+      region: 'Europe',
+      projectType: 'Financial AI Systems'
     }
   ];
 
   const industries = [
     {
-      name: 'Legal Services',
-      description: 'Accurate legal translations for solicitors, law firms, and legal departments',
+      name: 'AI Research',
+      description: 'Multilingual data collection and annotation for cutting-edge AI research',
       icon: CheckCircle
     },
     {
-      name: 'Financial Services',
-      description: 'Specialized financial translations for banking, insurance, and investment firms',
+      name: 'Machine Learning',
+      description: 'Training data preparation for ML models across multiple languages',
       icon: CheckCircle
     },
     {
-      name: 'Technology',
-      description: 'Technical translations for software, hardware, and IT documentation',
+      name: 'Autonomous Systems',
+      description: 'Specialized data for autonomous vehicles and robotics development',
       icon: CheckCircle
     },
     {
-      name: 'Medical & Healthcare',
-      description: 'Precise medical translations for pharmaceutical companies and healthcare providers',
+      name: 'Healthcare AI',
+      description: 'Medical data annotation with privacy and regulatory compliance',
       icon: CheckCircle
     },
     {
-      name: 'Engineering',
-      description: 'Technical translations for engineering specifications and documentation',
+      name: 'Enterprise AI',
+      description: 'Large-scale data engineering for enterprise AI applications',
       icon: CheckCircle
     },
     {
-      name: 'Education',
-      description: 'Educational content translation for e-learning and academic institutions',
+      name: 'Financial AI',
+      description: 'Secure data solutions for fintech and financial AI systems',
       icon: CheckCircle
     }
   ];
@@ -172,32 +154,66 @@ export default function Testimonials() {
             className="mb-20"
           >
             <h2 className="text-3xl font-bold mb-12 text-center">More Client Success Stories</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.filter((_, index) => index !== 2).map((testimonial, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                  className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:bg-slate-800/70 transition"
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  className="bg-slate-800/50 border border-white/10 rounded-2xl p-6"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <blockquote className="text-gray-300 mb-6 italic">
+                  <p className="text-gray-300 mb-4 italic">
                     "{testimonial.content}"
-                  </blockquote>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-sm text-gray-400">{testimonial.company}</p>
-                    </div>
-                    <div className="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-xs">
-                      {testimonial.service}
-                    </div>
+                  </p>
+                  <div className="mb-2">
+                    <span className="font-semibold">{testimonial.client}</span>
+                    <span className="text-gray-400 ml-2">| {testimonial.industry}</span>
                   </div>
+                  <p className="text-sm text-gray-400">{testimonial.projectType}</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <span className="text-xs bg-emerald-600/20 text-emerald-400 px-2 py-1 rounded">
+                      {testimonial.service}
+                    </span>
+                    <span className="text-xs bg-blue-600/20 text-blue-400 px-2 py-1 rounded">
+                      {testimonial.region}
+                    </span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Success Metrics */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mb-20"
+          >
+            <h2 className="text-3xl font-bold mb-12 text-center">Professional Workflow Excellence</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                { metric: '99.8%', description: 'Data Accuracy Rate', detail: 'Across all annotation projects' },
+                { metric: '95%', description: 'Client Retention', detail: 'Preferred supplier status' },
+                { metric: '48h', description: 'Average Turnaround', detail: 'For standard datasets' },
+                { metric: '100%', description: 'NDA Compliance', detail: 'Zero privacy breaches' }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-4xl font-bold text-emerald-400 mb-2">{stat.metric}</div>
+                  <div className="text-xl font-semibold mb-1">{stat.description}</div>
+                  <div className="text-sm text-gray-400">{stat.detail}</div>
                 </motion.div>
               ))}
             </div>
@@ -207,29 +223,17 @@ export default function Testimonials() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
             className="mb-20"
           >
-            <h2 className="text-3xl font-bold mb-12 text-center">Industries We Serve With Excellence</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">AI/ML Industries Served</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {industries.map((industry, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-                  className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:bg-slate-800/70 transition"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <industry.icon className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">{industry.name}</h3>
-                      <p className="text-gray-300 text-sm">{industry.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
+                <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
+                  <industry.icon className="w-8 h-8 text-emerald-400 mb-4" />
+                  <h3 className="text-lg font-bold mb-2">{industry.name}</h3>
+                  <p className="text-gray-300 text-sm">{industry.description}</p>
+                </div>
               ))}
             </div>
           </motion.div>
