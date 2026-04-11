@@ -12,7 +12,7 @@ export default function Team() {
       image: '/images/team/stephen-weir.jpg',
       bio: 'Leading Stealth Translations with strategic vision and operational excellence, driving growth and innovation in translation services.',
       location: 'Belfast Headquarters',
-      email: 'stephen.weir@stealthtranslations.com'
+      email: 'stephen@stealthtranslations.com'
     },
     {
       name: 'Marek Posnik',
@@ -20,7 +20,7 @@ export default function Team() {
       image: '/images/team/marek-posnik.jpg',
       bio: 'Leading our technology infrastructure and software development, ensuring robust systems for our AI-powered translation services.',
       location: 'Poland Office',
-      email: 'marek.posnik@stealthtranslations.com'
+      email: 'marek@stealthtranslations.com'
     },
     {
       name: 'Robert Elliott',
@@ -28,15 +28,15 @@ export default function Team() {
       image: '/images/team/robert-elliott.jpg',
       bio: 'Driving business development and client relationships, expanding our global reach in translation and AI services.',
       location: 'Belfast Headquarters',
-      email: 'robert.elliott@stealthtranslations.com'
+      email: 'robert@stealthtranslations.com'
     },
     {
-      name: 'Adi Shtyla',
+      name: 'Adi Shtylla',
       position: 'Operations Manager',
-      image: '/images/team/adi-shtyla.jpg',
+      image: '/images/team/adi-shtylla.jpg',
       bio: 'Managing day-to-day operations and project delivery, ensuring efficiency and quality across all translation services.',
       location: 'Belfast Headquarters',
-      email: 'adi.shtyla@stealthtranslations.com'
+      email: 'adi@stealthtranslations.com'
     },
     {
       name: 'Florence Shupikai Bondayi',
@@ -44,7 +44,7 @@ export default function Team() {
       image: '/images/team/florence-shupikai.jpg',
       bio: 'Overseeing financial operations and strategic planning, maintaining fiscal health and compliance for global operations.',
       location: 'Belfast Headquarters',
-      email: 'florence.bondayi@stealthtranslations.com'
+      email: 'florence@stealthtranslations.com'
     }
   ];
 
