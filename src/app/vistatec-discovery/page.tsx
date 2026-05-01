@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
+'use client';
+
 import { useState, useEffect } from 'react';
 import PasswordGate from '@/components/PasswordGate';
 import DiscoveryForm from '@/components/DiscoveryForm';
-
-export const metadata: Metadata = {
-  title: "Data Engineering Capability & Opportunity Discovery | Stealth Translations",
-  description: "Private discovery workspace for Vistatec's data engineering and annotation service development",
-};
 
 export default function VistatecDiscoveryPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
