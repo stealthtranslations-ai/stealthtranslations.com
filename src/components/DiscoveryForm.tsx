@@ -188,7 +188,7 @@ export default function DiscoveryForm({ onFormSubmit }: DiscoveryFormProps) {
     setFormData(prev => ({
       ...prev,
       [section]: {
-        ...prev[section],
+        ...(prev[section] as any),
         [field]: value
       }
     }));
@@ -287,7 +287,7 @@ export default function DiscoveryForm({ onFormSubmit }: DiscoveryFormProps) {
       
       <FormField label="Are there any internal revenue or growth targets associated with this area?">
         <TextAreaField
-          value={formData.strategicIntent.revenueTargets}
+          value={formData.strategicIntent.revenueTargets || ''}
           onChange={(value) => updateFormData('strategicIntent', 'revenueTargets', value)}
           placeholder="Optional: Any specific revenue or growth targets"
           rows={2}
@@ -414,7 +414,7 @@ export default function DiscoveryForm({ onFormSubmit }: DiscoveryFormProps) {
       
       <FormField label="What systems or platforms are currently used that may be relevant?">
         <TextAreaField
-          value={formData.existingCapability.existingSystems}
+          value={formData.existingCapability.existingSystems || ''}
           onChange={(value) => updateFormData('existingCapability', 'existingSystems', value)}
           placeholder="Optional: Current systems, platforms, or tools"
           rows={2}
@@ -481,7 +481,7 @@ export default function DiscoveryForm({ onFormSubmit }: DiscoveryFormProps) {
       
       <FormField label="What concerns exist around sales accepting work before delivery implications are fully understood?">
         <TextAreaField
-          value={formData.decisionProcess.salesDeliveryConcerns}
+          value={formData.decisionProcess.salesDeliveryConcerns || ''}
           onChange={(value) => updateFormData('decisionProcess', 'salesDeliveryConcerns', value)}
           placeholder="Optional: Any concerns about sales/delivery alignment"
           rows={2}
