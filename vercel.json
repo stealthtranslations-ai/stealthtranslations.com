@@ -25,5 +25,11 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/proposal-page.html",
+      "destination": "/proposal-page.html"
+    }
   ]
 }

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Production System - Stealth Translations Ltd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'green': {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        'slate': {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .print-break-after { page-break-after: always; }
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .no-print { display: none !important; }
+            @page { margin: 1.5cm; size: A4; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-white">
+    <!-- Password Gate -->
+    <div id="passwordGate" class="min-h-screen bg-gradient-to-br from-slate-800 via-green-700 to-slate-900 flex items-center justify-center">
+        <div class="max-w-md w-full mx-4">
+            <div class="bg-white rounded-2xl shadow-2xl p-8">
+                <div class="text-center mb-8">
+                    <h1 class="text-2xl font-bold text-slate-900 mb-2">Secure Proposal Access</h1>
+                    <p class="text-slate-600">Please enter the password to view the proposal</p>
+                </div>
+                
+                <form onsubmit="checkPassword(event)" class="space-y-4">
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-slate-700 mb-2">
+                            Password
+                        </label>
+                        <input
+                            type="password"
+                            id="password"
+                            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition"
+                            placeholder="Enter password"
+                            required
+                        />
+                    </div>
+                    
+                    <div id="errorMessage" class="bg-red-50 border border-red-200 rounded-lg p-3 hidden">
+                        <p class="text-red-700 text-sm">Incorrect password. Please try again.</p>
+                    </div>
+                    
+                    <button
+                        type="submit"
+                        class="w-full bg-gradient-to-r from-green-600 to-slate-700 text-white py-3 rounded-lg font-semibold hover:from-green-700 hover:to-slate-800 transition duration-200"
+                    >
+                        Access Proposal
+                    </button>
+                </form>
+                
+                <div class="mt-6 text-center">
+                    <p class="text-xs text-slate-500">
+                        For access assistance, contact Stealth Translations Ltd
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proposal Content -->
+    <div id="proposalContent" class="hidden">
+        <!-- Cover Section -->
+        <div class="bg-gradient-to-br from-slate-800 via-green-700 to-slate-900 text-white print-break-after">
+            <div class="max-w-6xl mx-auto px-8 py-24">
+                <!-- Stealth Translations Ltd Branding -->
+                <div class="flex items-center mb-8">
+                    <div class="text-white/90 font-semibold tracking-wide">Stealth Translations Ltd</div>
+                </div>
+                
+                <div class="mb-8">
+                    <h1 class="text-5xl font-bold mb-4 leading-tight">
+                        Report Production System
+                        <span class="block text-3xl font-light mt-2 text-white/90">Phase 1 Proposal</span>
+                    </h1>
+                    <div class="w-24 h-1 bg-white/30 rounded-full"></div>
+                </div>
+                
+                <div class="flex items-center space-x-8 text-white/90">
+                    <div>
+                        <p class="text-sm uppercase tracking-wider mb-1">Client</p>
+                        <p class="text-xl font-semibold">Shaun Burns</p>
+                        <p class="text-white/80">Burns & Co</p>
+                    </div>
+                    <div class="w-px h-16 bg-white/20"></div>
+                    <div>
+                        <p class="text-sm uppercase tracking-wider mb-1">Date</p>
+                        <p class="text-xl font-semibold" id="currentDate"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-8 py-16 space-y-20">
+            
+            <!-- Context Section -->
+            <section class="print-break-after">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                        <div class="w-6 h-6 bg-green-600 rounded-sm"></div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900">Context</h2>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                    <p class="text-slate-600 mb-6">From our discussion, your current workflow has three constraints:</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 mb-1">Significant time spent converting site observations into structured reports</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 mb-1">Reliance on manual write-up and assistant support</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 mb-1">Capacity limitations despite strong demand (turning away work)</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-4 bg-red-50 rounded-xl border border-red-200">
+                        <p class="text-red-900 font-medium">
+                            At present, report production is acting as the primary bottleneck to scaling your operation.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Objective Section - Highlighted -->
+            <section class="print-break-after">
+                <div class="bg-gradient-to-r from-green-600 to-slate-700 rounded-2xl p-1">
+                    <div class="bg-white rounded-2xl p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-slate-700 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h2 class="text-3xl font-bold text-slate-900">Objective</h2>
+                        </div>
+                        
+                        <div class="text-center py-8">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">
+                                Increase your report production capacity without increasing headcount
+                            </h3>
+                            <div class="w-32 h-1 bg-gradient-to-r from-green-600 to-slate-700 rounded-full mx-auto"></div>
+                            <p class="text-xl text-slate-600 mt-4">
+                                by removing the manual report writing bottleneck
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 1 Overview -->
+            <section class="print-break-after">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                        <div class="w-6 h-6 bg-green-600 rounded-sm"></div>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900">Phase 1 Overview – Core System</h2>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-slate-900 mb-4">Phase 1 focuses on one outcome:</h3>
+                        <div class="bg-gradient-to-r from-green-50 to-slate-50 rounded-xl p-6 border border-green-200">
+                            <p class="text-lg font-medium text-green-900">
+                                Transforming site observations into a structured, near-complete report automatically
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-semibold text-slate-900 mb-4">Current workflow:</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-slate-600 text-sm font-semibold">1</span>
+                                    </div>
+                                    <span class="text-slate-700">Site visit</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-slate-600 text-sm font-semibold">2</span>
+                                    </div>
+                                    <span class="text-slate-700">Notes + photos</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-slate-600 text-sm font-semibold">3</span>
+                                    </div>
+                                    <span class="text-slate-700">Manual report writing (assistant + review)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-slate-900 mb-4">Phase 1 workflow:</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-green-600 text-sm font-semibold">1</span>
+                                    </div>
+                                    <span class="text-slate-700">Site visit</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-green-600 text-sm font-semibold">2</span>
+                                    </div>
+                                    <span class="text-slate-700">Structured voice capture (guided)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-green-600 text-sm font-semibold">3</span>
+                                    </div>
+                                    <span class="text-slate-700">System generates full draft report</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                        <span class="text-green-600 text-sm font-semibold">4</span>
+                                    </div>
+                                    <span class="text-slate-700">You review and finalise</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-6 bg-gradient-to-r from-green-50 to-slate-50 rounded-xl border border-green-200">
+                        <h4 class="font-semibold text-green-900 mb-2">Key shift</h4>
+                        <p class="text-green-800 text-lg">
+                            You move from <span class="font-bold">writing reports</span> → to <span class="font-bold">reviewing reports</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Investment Options -->
+            <section class="print-break-after">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900">Investment Options</h2>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                    <p class="text-slate-600 mb-8">
+                        To keep this flexible, there are three ways to structure the engagement:
+                    </p>
+
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        {/* Option A - Recommended */}
+                        <div class="relative">
+                            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                                <span class="bg-gradient-to-r from-green-600 to-slate-700 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                    Recommended
+                                </span>
+                            </div>
+                            <div class="bg-gradient-to-br from-green-50 to-slate-50 rounded-2xl p-6 border-2 border-green-300 h-full">
+                                <h3 class="font-bold text-xl text-slate-900 mb-2">Option A – Balanced</h3>
+                                <div class="space-y-4">
+                                    <div>
+                                        <p class="text-sm text-slate-600 mb-1">Setup fee</p>
+                                        <p class="text-3xl font-bold text-green-600">£2,000</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-slate-600 mb-1">Monthly</p>
+                                        <p class="text-2xl font-bold text-slate-900">£800<span class="text-lg font-normal text-slate-600">/month</span></p>
+                                    </div>
+                                    <div class="pt-4 border-t border-green-200">
+                                        <p class="text-sm text-green-700">6-month minimum term</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Option B */}
+                        <div class="bg-white rounded-2xl p-6 border border-slate-200 h-full">
+                            <h3 class="font-bold text-xl text-slate-900 mb-2">Option B – Lower upfront</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-sm text-slate-600 mb-1">Setup fee</p>
+                                    <p class="text-3xl font-bold text-slate-900">£1,500</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-600 mb-1">Monthly</p>
+                                    <p class="text-2xl font-bold text-slate-900">£900<span class="text-lg font-normal text-slate-600">/month</span></p>
+                                </div>
+                                <div class="pt-4 border-t border-slate-200">
+                                    <p class="text-sm text-slate-600">6-month minimum term</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Option C */}
+                        <div class="bg-white rounded-2xl p-6 border border-slate-200 h-full">
+                            <h3 class="font-bold text-xl text-slate-900 mb-2">Option C – Priority</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-sm text-slate-600 mb-1">Setup fee</p>
+                                    <p class="text-3xl font-bold text-slate-900">£2,500</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-600 mb-1">Monthly</p>
+                                    <p class="text-2xl font-bold text-slate-900">£1,000<span class="text-lg font-normal text-slate-600">/month</span></p>
+                                </div>
+                                <div class="pt-4 border-t border-slate-200">
+                                    <p class="text-sm text-slate-600">Priority development and faster iteration cycles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Next Steps -->
+            <section>
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900">Next Steps</h2>
+                </div>
+
+                <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200">
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-semibold text-sm">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-900">Confirm preferred pricing option</h4>
+                                <p class="text-green-700">Select Option A, B, or C based on your preferences</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-semibold text-sm">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-900">Provide 2–3 recent reports for baseline structure</h4>
+                                <p class="text-green-700">Help us understand your current format and requirements</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-semibold text-sm">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-900">Define initial capture framework</h4>
+                                <p class="text-green-700">Set up the guided voice capture structure</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-semibold text-sm">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-900">Begin Phase 1 implementation</h4>
+                                <p class="text-green-700">Start building your customized report production system</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <div class="text-center py-12 border-t border-slate-200">
+                <div class="text-center mb-4">
+                    <div class="text-slate-600 font-medium tracking-wide">Stealth Translations Ltd</div>
+                </div>
+                <p class="text-slate-500">Report Production System • Phase 1 Proposal</p>
+                <p class="text-slate-400 text-sm mt-2">Confidential • Prepared for Shaun Burns / Burns & Co</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-GB', { 
+            day: 'numeric', 
+            month: 'long', 
+            year: 'numeric' 
+        });
+
+        // Password protection
+        function checkPassword(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            const correctPassword = 'Burns2024'; // You can change this
+            
+            if (password === correctPassword) {
+                document.getElementById('passwordGate').classList.add('hidden');
+                document.getElementById('proposalContent').classList.remove('hidden');
+            } else {
+                document.getElementById('errorMessage').classList.remove('hidden');
+                document.getElementById('password').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
