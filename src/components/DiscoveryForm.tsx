@@ -149,9 +149,12 @@ export default function DiscoveryForm({ onFormSubmit }: DiscoveryFormProps) {
 
     sections.forEach(section => {
       const sectionData = formData[section.key as keyof DiscoveryFormData];
-      const hasContent = Object.values(sectionData as any).some(value => 
-        value && (typeof value === 'string' ? value.trim() : value.length > 0)
-      );
+      const hasContent = Object.values(sectionData as any).some(value => {
+        if (!value) return false;
+        if (typeof value === 'string') return value.trim().length > 0;
+        if (Array.isArray(value)) return value.length > 0;
+        return true; // For other types like numbers, booleans, etc.
+      });
       if (!hasContent) {
         errors.push(`${section.name} section requires at least one response`);
       }
