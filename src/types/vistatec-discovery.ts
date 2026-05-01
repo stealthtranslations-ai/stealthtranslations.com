@@ -99,7 +99,7 @@ export interface DatabaseResponse {
 }
 
 export interface FormSection {
-  id: keyof Omit<DiscoveryFormData, 'additionalNotes'>;
+  id: keyof DiscoveryFormData;
   title: string;
   purpose: string;
   isCompleted: boolean;
