@@ -20,7 +20,7 @@ export class VistatecDiscoveryService {
     sessionId?: string
   ): Promise<{ success: boolean; id?: string; error?: string }> {
     if (!supabase) {
-      // Fallback to localStorage
+      // Fallback to localStorage only if Supabase is not configured
       try {
         const key = `vistatec_discovery_${sessionId || 'anonymous'}`;
         localStorage.setItem(key, JSON.stringify({
@@ -37,6 +37,7 @@ export class VistatecDiscoveryService {
       }
     }
 
+    // Always try to save to Supabase first (primary storage)
     try {
       const { data, error } = await supabase
         .from('vistatec_discovery_responses')
@@ -62,10 +63,39 @@ export class VistatecDiscoveryService {
         .single();
 
       if (error) throw error;
+      
+      // Also save to localStorage as backup
+      try {
+        const key = `vistatec_discovery_${sessionId || 'anonymous'}`;
+        localStorage.setItem(key, JSON.stringify({
+          formData,
+          status,
+          lastSaved: new Date().toISOString(),
+          sessionId
+        }));
+      } catch (localError) {
+        console.warn('LocalStorage backup failed:', localError);
+      }
+      
       return { success: true, id: data.id };
     } catch (error) {
       console.error('Database save error:', error);
-      return { success: false, error: 'Failed to save to database' };
+      
+      // Fallback to localStorage if database fails
+      try {
+        const key = `vistatec_discovery_${sessionId || 'anonymous'}`;
+        localStorage.setItem(key, JSON.stringify({
+          formData,
+          status,
+          lastSaved: new Date().toISOString(),
+          sessionId
+        }));
+        console.warn('Database failed, using localStorage fallback.');
+        return { success: true };
+      } catch (localError) {
+        console.error('LocalStorage fallback also failed:', localError);
+        return { success: false, error: 'Failed to save to database and localStorage' };
+      }
     }
   }
 

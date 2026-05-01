@@ -95,7 +95,80 @@ export default function DiscoveryForm({ onFormSubmit }: DiscoveryFormProps) {
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [currentSection, setCurrentSection] = useState(0);
-  const [sessionId] = useState(() => `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
+  const [sessionId] = useState(() => {
+    // Get or create a persistent session ID that survives logout/login
+    let persistentId = localStorage.getItem('vistatec_discovery_session_id');
+    if (!persistentId) {
+      persistentId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      localStorage.setItem('vistatec_discovery_session_id', persistentId);
+    }
+    return persistentId;
+  });
+
+  // Load previously saved data on component mount
+  useEffect(() => {
+    const loadSavedData = async () => {
+      try {
+        // First try to load from Supabase (primary storage)
+        const responses = await VistatecDiscoveryService.getResponses('draft');
+        const userResponse = responses.find(r => r.session_id === sessionId);
+        
+        if (userResponse) {
+          // Load data from Supabase
+          const loadedData: Partial<DiscoveryFormData> = {
+            contactDetails: {
+              name: userResponse.contact_name || '',
+              email: userResponse.contact_email || '',
+              role: userResponse.contact_role || '',
+              additionalStakeholders: userResponse.additional_stakeholders || ''
+            },
+            strategicIntent: userResponse.strategic_intent || initialFormData.strategicIntent,
+            opportunityLandscape: userResponse.opportunity_landscape || initialFormData.opportunityLandscape,
+            existingCapability: userResponse.existing_capability || initialFormData.existingCapability,
+            decisionProcess: userResponse.decision_process || initialFormData.decisionProcess,
+            deliveryConstraints: userResponse.delivery_constraints || initialFormData.deliveryConstraints,
+            riskUnknowns: userResponse.risk_unknowns || initialFormData.riskUnknowns,
+            pilotCandidate: userResponse.pilot_candidate || initialFormData.pilotCandidate,
+            additionalNotes: userResponse.additional_notes || ''
+          };
+          
+          setFormData(prev => ({ ...prev, ...loadedData }));
+          setLastSaved(new Date(userResponse.updated_at));
+        } else {
+          // Fallback to localStorage
+          const localData = localStorage.getItem(`vistatec_discovery_${sessionId}`);
+          if (localData) {
+            const parsed = JSON.parse(localData);
+            if (parsed.formData) {
+              setFormData(prev => ({ ...prev, ...parsed.formData }));
+              if (parsed.lastSaved) {
+                setLastSaved(new Date(parsed.lastSaved));
+              }
+            }
+          }
+        }
+      } catch (error) {
+        console.warn('Failed to load saved data:', error);
+        // Fallback to localStorage
+        try {
+          const localData = localStorage.getItem(`vistatec_discovery_${sessionId}`);
+          if (localData) {
+            const parsed = JSON.parse(localData);
+            if (parsed.formData) {
+              setFormData(prev => ({ ...prev, ...parsed.formData }));
+              if (parsed.lastSaved) {
+                setLastSaved(new Date(parsed.lastSaved));
+              }
+            }
+          }
+        } catch (localError) {
+          console.warn('LocalStorage fallback also failed:', localError);
+        }
+      }
+    };
+
+    loadSavedData();
+  }, [sessionId]);
 
   // Auto-save every 30 seconds
   useEffect(() => {
