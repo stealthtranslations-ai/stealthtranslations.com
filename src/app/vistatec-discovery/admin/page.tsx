@@ -1,10 +1,14 @@
-'use client';
-
+import type { Metadata } from "next";
 import { useState, useEffect } from 'react';
 import { Download, Eye, Trash2, Filter, Search } from 'lucide-react';
 import PasswordGate from '@/components/PasswordGate';
 import { VistatecDiscoveryService } from '@/lib/supabase';
 import { DatabaseResponse } from '@/types/vistatec-discovery';
+
+export const metadata: Metadata = {
+  title: "Discovery Admin | Stealth Translations",
+  description: "Admin interface for managing Vistatec discovery form submissions",
+};
 
 export default function VistatecDiscoveryAdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
